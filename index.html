@@ -4,41 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full stack Sessions</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 5px;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    div.parent{
+        height: 500px;
+        background-color: rgb(10, 10, 2);
+    }
+    div.child{
+        height: 100px;
+        width: 100px;
+        background-color: yellow ;
+        border-radius: 50%;
+        animation: 2s move ease;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-delay: 1s;
+    }
+    @keyframes move{
+        0%{
+            transform: translateX(0vw);
+        } 
+        50%{
+            transform: translate(300px, 200px);
+            background-color: aquamarine;
         }
-        
-        div.parent{
-            background-color: black;
-            min-height: 200px;
-            transition-duration: 0.5s;
-            transition-timing-function: ease-out;
+        100%{
+            transform: translateY(400px);
+            background-color: darkviolet;
         }
-        div.child{
-            background-color: yellow;
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            transition-duration: 0.5s;
-            transition-timing-function: ease-out;
-        }
-        div.parent:hover div.child{
-            background-color: aqua;
-            transform: translate(600px);
-        }
-        div.parent:hover{
-            background-color: blueviolet;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-  <div class="parent">
-      <div class="child"></div>
-  </div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
 </body>
 </html>
