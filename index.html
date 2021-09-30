@@ -8,31 +8,30 @@
     <style>
         *{
             padding: 0;
-            margin: 0;
+            margin: 5px;
             box-sizing: border-box;
         }
-        .parent{
-            height: 900px;
-            background-color: black;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .background{
+            color: white;
         }
-        .child{
-            width: 100px;
-            height: 150px;
-            background-color: orange;      
-            margin: 10px;    
+        h1.background{
+            background-color: rgb(13, 63, 226);
+        }
+        h2.background{
+            background-color: orange;
+        }
+        h3.background{
+            background-color: rgb(216, 49, 7);
+        }
+        span.background{
+            background-color: black;
         }
     </style>
 </head>
 <body>
-    <div class="parent">
-        <div class="child"></div>
-        <div style="background-color: tomato"class="child"></div>
-        <div style="background-color: rgb(83, 71, 255)"class="child"></div>
-    </div>
+    <h1 class="background">Heading One</h1>
+    <h2 class="background">Heading Two</h2>
+    <h3 class="background">Heading Three</h3>
+    <span class="background">I am a span</span>
 </body>
 </html>
