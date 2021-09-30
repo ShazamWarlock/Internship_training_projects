@@ -10,28 +10,43 @@
             padding: 0;
             margin: 5px;
             box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        .background{
+        h2{
+            padding: 5px;
             color: white;
+            background-color: blue;
         }
-        h1.background{
-            background-color: rgb(13, 63, 226);
+        h2:hover{
+            background-color: blueviolet;
+            cursor:pointer;
         }
-        h2.background{
-            background-color: orange;
+        div::selection{
+            background-color:aqua;
         }
-        h3.background{
-            background-color: rgb(216, 49, 7);
+        input:focus{
+            background-color: aquamarine;
+            color: purple;
         }
-        span.background{
-            background-color: black;
+        h2::after{
+            content:"I am after";
+            font-size: 10px;
+            color: rgb(233, 13, 214);
+            position: relative;
+        }
+        h2::before{
+            content:"I am before";
+            font-size: 10px;
+            color: rgb(243, 40, 26);
+            position: relative;
         }
     </style>
 </head>
 <body>
-    <h1 class="background">Heading One</h1>
-    <h2 class="background">Heading Two</h2>
-    <h3 class="background">Heading Three</h3>
-    <span class="background">I am a span</span>
+    <h2>I am a heading</h2>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat amet accusantium ad magni nihil, vel aperiam, deleniti veniam eveniet et perspiciatis soluta eos, velit cupiditate doloremque exercitationem ipsam similique maxime quia tempore inventore. Praesentium sint ab pariatur quod necessitatibus accusamus laboriosam mollitia, animi totam quis, consequatur officiis, nemo quasi minus.
+    </div>
+    <input type="text"/>
 </body>
 </html>
