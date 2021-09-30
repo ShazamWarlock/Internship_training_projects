@@ -12,41 +12,33 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
-        h2{
-            padding: 5px;
-            color: white;
-            background-color: blue;
+        
+        div.parent{
+            background-color: black;
+            min-height: 200px;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
         }
-        h2:hover{
+        div.child{
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+        }
+        div.parent:hover div.child{
+            background-color: aqua;
+            transform: translate(600px);
+        }
+        div.parent:hover{
             background-color: blueviolet;
-            cursor:pointer;
-        }
-        div::selection{
-            background-color:aqua;
-        }
-        input:focus{
-            background-color: aquamarine;
-            color: purple;
-        }
-        h2::after{
-            content:"I am after";
-            font-size: 10px;
-            color: rgb(233, 13, 214);
-            position: relative;
-        }
-        h2::before{
-            content:"I am before";
-            font-size: 10px;
-            color: rgb(243, 40, 26);
-            position: relative;
         }
     </style>
 </head>
 <body>
-    <h2>I am a heading</h2>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat amet accusantium ad magni nihil, vel aperiam, deleniti veniam eveniet et perspiciatis soluta eos, velit cupiditate doloremque exercitationem ipsam similique maxime quia tempore inventore. Praesentium sint ab pariatur quod necessitatibus accusamus laboriosam mollitia, animi totam quis, consequatur officiis, nemo quasi minus.
-    </div>
-    <input type="text"/>
+  <div class="parent">
+      <div class="child"></div>
+  </div>
 </body>
 </html>
