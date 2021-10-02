@@ -4,14 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
-
+    <style>
+        div.parent{
+            background: rgb(27, 27, 27);
+            align-items: stretch;
+            height: 100vh;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div.child{
+            background-color: rgb(230, 190, 11);
+            flex-basis: 80%;
+        }
+        div.sidebar{
+            background-color: crimson;
+            flex-basis: 20%;
+        }
+        @media(max-width: 550px){
+            div.sidebar{
+                animation: 2s expand linear 1;
+            }
+            div.child{
+                flex-basis:100%;
+            }
+        }
+        @keyframes expand{
+            0%{
+                flex-basis:0%;
+            }
+            100%{
+                flex-basis: 50%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="parent">
+        <div class="sidebar"></div>
         <div class="child"></div>
-        <div class="child-2"></div>
     </div>
 </body>
 </html>
