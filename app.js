@@ -1,62 +1,43 @@
-/*function greet(Name, age){
-    //console.log(Name, age)
-    console.log('Hello') 
-    console.log('Hey '+ Name + ". Your age is "+ age)
-}
-//greet('Vrishir',20)*/
-/*function add (a=0,b=0){
-    console.log('declaration')
-    var sum=a+b
-    return sum
-}
+const a = document.querySelectorAll('input')[0]
+const b = document.querySelectorAll('input')[1]
+const add = document.querySelector('#add')
+const multiply = document.querySelector('#multiply')
+const resultBox = document.querySelector('.result')
 
-console.log(add(10,20))
-//result = add(10,20)
-//console.log(result)
-var add = (a=0,b=0)=>{
-    console.log('expression')
-    var sum=a+b
-    return sum
-}
-console.log(add(10,20))*/
-/*var add=(a=0,b=0)=>{
-    return a+b
+/*const sum = () => {
+    const result = parseInt(a.value) + parseInt(b.value)
+    resultBox.innerHTML = result
 }
 
-var add=(a=0,b=0)=>a+b
-console.log(add(10,20))*/
-
-
-/*const greet=name=>'hi ' + name
-console.log(greet('Prabakaran'))*/
-
-
-//Call back FUNCTION
-/*var arr=['go to the GYM', 'Eat Food', 'Clean House']
-
-/*for(var i=0;i<arr.length;i++){
-    console.log(arr[i])
+const product = () => {
+    const result = parseInt(a.value) * parseInt(b.value)
+    resultBox.innerHTML = result
 }*/
 
-
-/*var callbackfunction=(element,index)=>{
-    console.log(element,index)
-}*/
-/*arr.forEach((element,index)=>{
-    console.log(element,index)
-})*/
-
-var button = document.querySelector('button')
-var body = document.querySelector('body')
-
-const callbackfunction = (event) =>{
-    //console.log(input.)
-    /*const inputValue = input.value
-    const element = document.createElement('li')
-    const textNode = document.createTextNode(inputValue)
-    element.appendChild(textNode)
-    list.appendChild(element)*/
-    body.classList.toggle('dark')
+const calculate = (event, operation) => {
+    console.log(event.target)
+    /*if(operation == 'add'){
+        console.log('adding')
+    }
+    else if(operation == 'multiply'){
+        console.log('multiplying')
+    }*/
+    switch(operation){
+        case "add":
+            resultBox.innerHTML = parseInt(a.value) + parseInt(b.value)
+            break
+        case "multiply":
+            resultBox.innerHTML = parseInt(a.value) * parseInt(b.value)
+            break
+            
+    }
 }
 
-button.addEventListener('click', callbackfunction)
+add.addEventListener('click', () => {
+    calculate(event, 'add')  //function calling another function (recursion)
+})
+
+multiply.addEventListener('click', () =>{
+    calculate(event, 'multiply')
+})
+
