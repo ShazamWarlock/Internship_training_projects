@@ -1,54 +1,27 @@
-const a = document.querySelectorAll('input')[0]
-const b = document.querySelectorAll('input')[1]
-const add = document.querySelector('#add')
-const multiply = document.querySelector('#multiply')
-const subtract = document.querySelector('#subtract')
-const resultBox = document.querySelector('.result')
+var arr = [1,2,3,4,5,6,7,8]
 
-/*const sum = () => {
-    const result = parseInt(a.value) + parseInt(b.value)
-    resultBox.innerHTML = result
+/*arr.shift(6)  
+
+console.log(arr)
+
+arr.unshift(6) //puts new element at the beginning of the array
+*/
+
+/*var new_arr = arr.slice(2,5)  //gives elements from a to b in (a,b)
+
+console.log(new_arr)*/
+
+/*var new_arr=[]
+
+for(var i =0; i< arr.length; i++){
+    if(arr[i]%2===0) 
+        new_arr.push(arr[i])
 }
+console.log(new_arr)*/
 
-const product = () => {
-    const result = parseInt(a.value) * parseInt(b.value)
-    resultBox.innerHTML = result
-}*/
-
-const calculate = (event, operation) => {
-    console.log(event.target)
-    /*if(operation == 'add'){
-        console.log('adding')
-    }
-    else if(operation == 'multiply'){
-        console.log('multiplying')
-    }*/
-    switch(operation){
-        case "add":
-            resultBox.innerHTML = parseInt(a.value) + parseInt(b.value)
-            break
-        case "multiply":
-            resultBox.innerHTML = parseInt(a.value) * parseInt(b.value)
-            break
-        case "subtract":
-            resultBox.innerHTML = parseInt(a.value) - parseInt(b.value)
-            break
-        default:
-            console.log("ERROR")
-        
-    }
-}
-
-add.addEventListener('click', () => {
-    calculate(event, 'add')  //function calling another function (recursion)
+var new_arr = arr.filter((element, index) => {
+    if(element <10)
+        return true
 })
 
-multiply.addEventListener('click', () =>{
-    calculate(event, 'multiply')
-})
-
-subtract.addEventListener('click', () =>{
-    calculate(event, 'subtract')
-})
-
-
+console.log(new_arr)
