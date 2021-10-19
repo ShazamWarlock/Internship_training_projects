@@ -19,9 +19,13 @@ for(var i =0; i< arr.length; i++){
 }
 console.log(new_arr)*/
 
-var new_arr = arr.filter((element, index) => {
+/*var new_arr = arr.filter((element, index) => {
     if(element <10)
         return true
 })
 
-console.log(new_arr)
+console.log(new_arr)*/
+
+arr.splice(3,3)
+
+console.log(arr)
