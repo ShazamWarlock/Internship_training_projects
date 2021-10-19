@@ -47,8 +47,13 @@ var button = document.querySelector('button')
 var input = document.querySelector('input')
 var list = document.querySelector('ul') 
 
-var chores = ['GYM']
-chores.includes('GYM')
+var chores = []
+
+var deleteItem = (value) => {
+    const index = chores.indexOf(value)
+    chores.splice(index,1)
+    console.log(chores)
+}
 
 const callbackfunction = (event) =>{
     //console.log(input.value)
