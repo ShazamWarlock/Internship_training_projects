@@ -1,74 +1,122 @@
-/*function greet(Name, age){
-    //console.log(Name, age)
-    console.log('Hello') 
-    console.log('Hey '+ Name + ". Your age is "+ age)
-}
-//greet('Vrishir',20)*/
-/*function add (a=0,b=0){
-    console.log('declaration')
-    var sum=a+b
-    return sum
-}
-console.log(add(10,20))
-//result = add(10,20)
-//console.log(result)
-var add = (a=0,b=0)=>{
-    console.log('expression')
-    var sum=a+b
-    return sum
-}
-console.log(add(10,20))*/
-/*var add=(a=0,b=0)=>{
-    return a+b
-}
-var add=(a=0,b=0)=>a+b
-console.log(add(10,20))*/
+/*let a = 30
+var b = 40
+console.log(a,b)
+a=10
+b=43
+console.log(a,b)*/
 
 
-/*const greet=name=>'hi ' + name
-console.log(greet('Prabakaran'))*/
+//"let" variable
+//Block Scope
+/*if(true){
+    let Name = 'Shazam'     //doesnt work
+    console.log(Name)
+}
+console.log(Name)
+
+if(true){
+    var Name = 'Shazam'     //works
+    console.log(Name)
+}
+console.log(Name)*/
 
 
-//Call back FUNCTION
-/*var arr=['go to the GYM', 'Eat Food', 'Clean House']
-/*for(var i=0;i<arr.length;i++){
-    console.log(arr[i])
+/*for(var i=0; i<10; i++){
+    console.log('loop ran')
+}
+console.log(i)*/
+
+
+//Nesting of scopes (parent and child)
+/*if(true){
+    let Name = "Shazam"
+    if(true){
+        console.log(Name)
+    }
+}
+if(true){
+    console.log(Name)
+    if(true){
+        let Name = "Shazam"
+    }
 }*/
 
 
-/*var callbackfunction=(element,index)=>{
-    console.log(element,index)
-}*/
-/*arr.forEach((element,index)=>{
-    console.log(element,index)
-})*/
-
-var button = document.querySelector('button')
-var input = document.querySelector('input')
-var list = document.querySelector('ul') 
-
-var chores = []
-
-var deleteItem = (value) => {
-    const index = chores.indexOf(value)
-    chores.splice(index,1)
-    console.log(chores)
-}
-
-const callbackfunction = (event) =>{
-    //console.log(input.value)
-    const inputValue = input.value
-    if(chores.includes(input.value)){
-        console.log('already exists')
+/*
+const print = () => {
+    var Name = "Shazam"
+    if(true){
+        console.log(Name)
     }
-    else{
-        chores.push(inputValue)
-        const element = document.createElement('li')
-        const textNode = document.createTextNode(inputValue)
-        element.appendChild(textNode)
-        list.appendChild(element)
-        element.addEventListener('click', (e) => { console.log(e.target.innerHTML) })
+    return Name
+}
+print()
+console.log(Name)*/
 
+
+//console.log(this.alert('HI'))
+
+
+//Objects
+/*let car = {
+    Name: "C Class",
+    manufacturer: "Mercedes",
+    print: function(a) {
+        console.log(a)
     }
 }
-button.addEventListener('click', callbackfunction)
+car.print('Ferrari')
+console.log(car)*/
+
+
+
+/*let car = {
+    Name: "C Class",
+    manufacturer: "Mercedes",
+    print: () => {
+        console.log(`${car.Name} was manufactured by  ${car.manufacturer}`)
+    }
+}
+
+console.log(Object.keys(car))
+console.log(Object.values(car))*/
+
+
+/*let obj = {
+    h: "Hello ",
+    w: "world",
+    print: function() {
+        console.log(this) //refers to object
+        console.log(this.h + this.w);
+        console.log(obj.h)
+    }
+}
+console.log(obj.print("Shazam"))*/
+
+
+/*let car = {
+    Name: "C Class",
+    manufacturer: "Mercedes",
+    print: () => {
+        console.log(`${car.Name} was manufactured by  ${car.manufacturer}`)
+    }
+}
+console.log(car)
+console.log(car.hasOwnProperty('Name'))
+//console.log(Object)
+//console.log(Object)
+//console.log(Object.keys(car))
+//console.log(Object.values(car))
+*/
+
+
+/*setTimeout(()=>{
+    console.log("Shazam")
+}, 0)
+
+console.log('HI')*/
+
+
+
+var data = fetch('https://jsonplaceholder.typicode.com/todos/10')
+console.log(data)
