@@ -1,122 +1,63 @@
-/*let a = 30
-var b = 40
-console.log(a,b)
-a=10
-b=43
-console.log(a,b)*/
+/*console.log("one")
+
+setTimeout(function timeout(){
+    console.log("Timer 1");
+},2000)
+
+setTimeout(function timeout(){
+    console.log("Timer 2");
+},1000)
+
+console.log("two")
+console.log("two")
+console.log("two")
+console.log("two")
+console.log("two")
+console.log("two")
+console.log("two")*/
 
 
-//"let" variable
-//Block Scope
-/*if(true){
-    let Name = 'Shazam'     //doesnt work
-    console.log(Name)
-}
-console.log(Name)
 
-if(true){
-    var Name = 'Shazam'     //works
-    console.log(Name)
-}
-console.log(Name)*/
+/*setTimeout(() => {console.log('Timer')}, 0)
 
-
-/*for(var i=0; i<10; i++){
-    console.log('loop ran')
-}
-console.log(i)*/
-
-
-//Nesting of scopes (parent and child)
-/*if(true){
-    let Name = "Shazam"
-    if(true){
-        console.log(Name)
-    }
-}
-if(true){
-    console.log(Name)
-    if(true){
-        let Name = "Shazam"
-    }
+for(var i = 0; i<1000; i++){
+    console.log(i)
 }*/
 
 
-/*
-const print = () => {
-    var Name = "Shazam"
-    if(true){
-        console.log(Name)
-    }
-    return Name
-}
-print()
-console.log(Name)*/
 
+/*let value = new Promise((resolve, reject)=>{
+    setTimeout(() =>{
+        resolve('Hello')
+    }, 3000)
+})
 
-//console.log(this.alert('HI'))
+console.log(value)
 
-
-//Objects
-/*let car = {
-    Name: "C Class",
-    manufacturer: "Mercedes",
-    print: function(a) {
-        console.log(a)
-    }
-}
-car.print('Ferrari')
-console.log(car)*/
+setTimeout(() => {
+    console.log(value)
+},4000)
+//console.log(value)*/
 
 
 
-/*let car = {
-    Name: "C Class",
-    manufacturer: "Mercedes",
-    print: () => {
-        console.log(`${car.Name} was manufactured by  ${car.manufacturer}`)
-    }
-}
+/*let response = fetch('https://jsonplaceholder.typicode.com/users')
 
-console.log(Object.keys(car))
-console.log(Object.values(car))*/
+console.log(response)
 
-
-/*let obj = {
-    h: "Hello ",
-    w: "world",
-    print: function() {
-        console.log(this) //refers to object
-        console.log(this.h + this.w);
-        console.log(obj.h)
-    }
-}
-console.log(obj.print("Shazam"))*/
+setTimeout(() =>{
+    const data = response
+    console.log(response)
+    console.log(data,json())
+},2000)*/
 
 
-/*let car = {
-    Name: "C Class",
-    manufacturer: "Mercedes",
-    print: () => {
-        console.log(`${car.Name} was manufactured by  ${car.manufacturer}`)
-    }
-}
-console.log(car)
-console.log(car.hasOwnProperty('Name'))
-//console.log(Object)
-//console.log(Object)
-//console.log(Object.keys(car))
-//console.log(Object.values(car))
-*/
-
-
-/*setTimeout(()=>{
-    console.log("Shazam")
-}, 0)
-
-console.log('HI')*/
+let response = fetch('https://jsonplaceholder.typicode.com/users')
+.then(res => res.json()).then(data => {
+    console.log(data)
+})
+    
 
 
 
-var data = fetch('https://jsonplaceholder.typicode.com/todos/10')
-console.log(data)
+
