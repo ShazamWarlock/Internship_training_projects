@@ -124,6 +124,7 @@ fetchData()*/
 //challenge
 const button = document.querySelector('button')
 const input = document.querySelector('input')
+const getText = document.querySelector('Input')
 
 const getData = async () => {
     console.log(item)
@@ -131,9 +132,9 @@ const getData = async () => {
     console.log(url)
     const res = await fetch(url)
     const data = await res.json()
-    console.log(data)
+    console.log(data.hits)
 }
 //add event listener to the button
 button.addEventListener('click', () => {
-    console.log(input.value)
+    console.log(getText.value)
 })
