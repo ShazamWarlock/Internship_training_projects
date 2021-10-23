@@ -1,140 +1,28 @@
-//let response = fetch('https://jsonplaceholder.typicode.com/users')
-//.then(res => res.json())
+//console.log(require('./index'))
+/*const stuff = require('./index')
+
+console.log(stuff)*/
+
+/*const { add, subtract, multiplication, division, message} = require('./index')
+
+add()
+subtract()
+multiplication()
+division()
+console.log(message)*/
 
 
-    
-/*const list = document.querySelector('ul')
-let arr = ['One', 'Two', 'Three', 'Four']
-
-console.log(list)
-arr.forEach(chore =>{
-    const element = document.createElement('li')
-    const textNode = document.createTextNode(chore)
-    element.appendChild(textNode)
-    element.addEventListener('click', (e) => {
-        console.log(e.target.innerHTML)
-        e.target.remove()
-    })
-    //console.log(element)
-    list.appendChild(element)
-})*/
-
-
-
-/*const list = document.querySelector('ul')
-let arr = ['One', 'Two', 'Three', 'Four']
-
-console.log(list)
-arr.forEach(chore =>{
-    const element = document.createElement('li')
-    const textNode = document.createTextNode(chore)
-    element.appendChild(textNode)
-    element.addEventListener('click', (e) => {
-            const useInput = window.prompt(`Are you sure u want to delete? ${chore}`)
-            if(useInput === 'YES' || useInput === 'yes')
-                e.target.remove()
-        })
-    //console.log(element)
-    list.appendChild(element)
-}) */
-
-
-
-
-/*let Name = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve('Shazam')
-    },3000)
-})
-/*console.log(Name)
-setTimeout(() => {
-    console.log(Name)
-},4000)*/
- 
-/*Name.then(name => {
-    console.log(name)
-})*/
-
-
-
-//MINI PROJECT
-/*ul = document.querySelector("ul");
-let response = fetch('https://jsonplaceholder.typicode.com/users')
-.then(resp => resp.json()).then(data => {
-    console.log(data);
-    append_data = (element) => {
-        lielement = document.createElement("li");
-        user_detail = element['name'] + element['username'] + element['email']
-        textnode = document.createTextNode(user_detail);
-        lielement.appendChild(textnode);
-        ul.appendChild(lielement)
-    }
-    data.forEach(append_data);
-})*/
-
-
-
-/*const table = document.querySelector('table')
-console.log(table)
-
-const createRow = (user)=>{
-    let newRow = document.createElement('tr')
-    let element = `
-            <td> ${user.id}</td>
-            <td> ${user.name}</td>
-            <td> ${user.email}</td>
-            <td> ${user.username}</td>`
-            newRow.innerHTML = element
-            return newRow
+const obj1 = {
+    name: "McQueen"
+    email: "cars@cars.com"
 }
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        data.forEach(user => {
-            table.appendChild(createRow(user))
-        })
-    })*/
-
-
-
-//problem with Promise
-/*fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        data.forEach(user => {
-            console.log(data)
-        })
-    }) */
-
-
-
-/*    const fetchData = async() => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    console.log(response)
-    const data = await response.json()
-    console.log(data)
+//PUT
+const obj1 = {
+    name: "McQueen"
+    email: "cars@cars.com"
 }
-
-fetchData()*/
-
-
-
-//challenge
-const button = document.querySelector('button')
-const input = document.querySelector('input')
-const getText = document.querySelector('Input')
-
-const getData = async () => {
-    console.log(item)
-    let url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q = ${item}`
-    console.log(url)
-    const res = await fetch(url)
-    const data = await res.json()
-    console.log(data.hits)
+//PATCH
+const result = {
+    name: "McQueen"
+    email: "cars@cars.com"
 }
-//add event listener to the button
-button.addEventListener('click', () => {
-    console.log(getText.value)
-})
