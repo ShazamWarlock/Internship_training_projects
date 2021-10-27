@@ -1,48 +1,89 @@
-/*const http = require('http')
-const fs = require('fs')
-const path = require('path')
+/*const express = require('express')
+const PORT = 3000
 
-const server = http.createServer((request,response) => {
-    //console.log(request.url)
-    //console.log(request.method)
-    /*const path = request.url
-    const markup = fs.readFileSync('./index.html')
-    response.write(markup)
-    response.end()*/
-    /*const { url } = request
-    if(url == '/login'){
-        response.write('<h1>LOGIN<h1>')
-        response.end()
-    }
-    if(url == '/signup'){
-        response.write('<h1>SIGNUP<h1>')
-        response.end()
-    }
+const app = express()
+
+console.log(express)
+
+app.get('/', (req,res) => {
+    res.send('GET')
+})
+
+app.post('/', (req,res) => {
+    res.send('POST')
+})
+
+app.put('/', (req,res) => {
+    res.send('PUT')
+})
+
+app.patch('/', (req,res) => {
+    res.send('PATCH')
+})
+
+app.delete('/', (req,res) => {
+    res.send('DELETE')
+})
+
+/*app.get('/login', (req,res) => {
+    res.send('login form')
+})*/
+
+/*app.listen(PORT, () => {
+    console.log(`Server running at port ${3000}`)
 })
 
 
-server.listen(3000, ()=> {
-    console.log(`Server Listening at PORT: ${3000}`)
-})*/
+module.exports = () => {}*/
+
+
+
+/*const express = require('express')
+const PORT = 3000
+const app = express()*/
+
+/*const verify = (req,res,next) => {
+    if(req.headers['user-agent'] === "Thunder Client (https://www.thunderclient.io)") next()
+    else res.send('BLOCKED')
+}*/
+
+/*const isAdmin = (req,res,next) => {
+    if(req.headers.admin === 'true') next()
+    else res.send("UNAUTHORISED")
+}
+
+app.get('/public', (req,res) => {
+    console.log(req.headers)
+    res.send('This is a public route')
+    /*if(req.headers['user-agent'] === "Thunder Client (https://www.thunderclient.io") res.send('GET')
+    else res.send('BLOCKED')*/
+/*})
+
+app.get('/private', isAdmin, (req,res) => {
+    res.send('This is Admin route')
+})
+
+/*app.listen(PORT, () => {
+    console.log(`Server running at port ${3000}`)
+})
+
+module.exports = () => {}*/
+
 
 
 const express = require('express')
+const PORT = 3000
 const app = express()
 
-const data = [{ name: "Vrishir"}, { name: "Susan"}, { name: "Varun"}]
-app.get('/login', (req, res) => {
-    //console.log(req.url)
-    res.send('LOGIN')
+app.use(express.json())
+
+app.post('/signup', (req,res) => {
+    console.log(req.body)
+    res.send('dadada')
 })
 
-app.get('/signup', (req, res) => {
-    //console.log(req.url)
-    res.send('SIGNUP')
+app.listen(PORT, () => {
+    console.log(`Server running at port ${PORT}`)
 })
 
-app.get('/getNames', (req,res) => {
-    res.send(data)
-})
-app.listen(3000, () => {
-    console.log("Server listening at PORT: 3000")
-})
+module.exports = () => {}
