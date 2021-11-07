@@ -1,32 +1,22 @@
-/*const express = require('express')
-const app = express()
-
-app.get('/products/cases')
-app.get('/products/protection')
-app.get('/products/bands')
-
-app.get('/products/:categories', (req,res) => {
-    if(req.params.categories == 'band'){}
-    if(req.params.categories == 'case'){}
-    console.log(req.params)
-    res.send('PING')
-})
-
-
-app.listen(3001, () =>{
-    console.log("Listening at port 3001")
-})*/
-
-
-/*const express = require('express')
+const express = require('express')
 const database = require('./database/db')
 const app = express()
+const categoryRoutes = require('./routes/categoryRoutes')
+
+console.log(categoryRoutes.stack)
+
 app.use(express.json())
 
-//database.products.push('iphone')
-//console.log(database)
+app.use('/', categoryRoutes)
 
-app.listen(3001, () =>{
-    console.log("Listening at port 3001")
-})*/
+app.get('/', (req,res) => {
+    try {
+        console.log(document)
+    } catch (error) {
+        res.status(203).send(error.message)
+    }
+})
 
+app.listen(3001, ()=> {
+    console.log("Listening at PORT 3001")
+})

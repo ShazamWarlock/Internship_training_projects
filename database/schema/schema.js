@@ -1,4 +1,4 @@
-//Product
+// Product
 /*
 id: id
 Name: String
@@ -6,13 +6,13 @@ Price: Number
 Category: category_id
 */
 
-//Category
+// Category
 /*
 id: id
 Name: String
 */
 
-//Order
+// Order
 /*
 Total Price: Number
 Product: Array of Products [Product_id]
